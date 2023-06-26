@@ -20,7 +20,7 @@ jobs:
                     scope: '@amjs'
                     always-auth: 'true'
                     token: ${{ secrets.NPM_AUTH_TOKEN }}
-            -   run: cat /home/runner/work/_temp/.npmrc
+            -   run: cat ~/.npmrc
             -   run: npm ci
             -   run: npm test
 
