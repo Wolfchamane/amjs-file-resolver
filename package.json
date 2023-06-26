@@ -1,6 +1,6 @@
 {
     "name": "@amjs/file-resolver",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Resolves a file path",
     "license": "MIT",
     "author": "Arturo Martínez <arturo.martinez@amartinez.dev>",
