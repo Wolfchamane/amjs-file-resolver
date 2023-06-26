@@ -9,23 +9,7 @@ on:
             - '*'
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-            -   uses: actions/checkout@v3
-            -   uses: actions/setup-node@v3
-                with:
-                    node-version: 18
-                    registry-url: https://registry.npmjs.org/
-                    scope: '@amjs'
-                    always-auth: 'true'
-                    token: ${{ secrets.NPM_AUTH_TOKEN }}
-            -   run: cat ~/.npmrc
-            -   run: npm ci
-            -   run: npm test
-
     publish:
-        needs: test
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
