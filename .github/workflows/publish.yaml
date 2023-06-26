@@ -17,6 +17,9 @@ jobs:
                 with:
                     node-version: 18
                     registry-url: https://registry.npmjs.org/
+                    scope: '@amjs'
+                    always-auth: 'true'
+            -   run: cat /home/runner/work/_temp/.npmrc
             -   run: npm ci
             -   run: npm test
 
